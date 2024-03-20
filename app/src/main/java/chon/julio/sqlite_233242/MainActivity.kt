@@ -52,10 +52,9 @@ class MainActivity : ComponentActivity() {
 
         viewModel.showDialogLiveData.observe(this) { shouldShowDialog ->
             if (shouldShowDialog) {
-                // Muestra el diálogo aquí
-                // Puedes usar un DialogFragment o AlertDialog
+
                 showDialog()
-                // Restablece el estado en el ViewModel
+
                 viewModel.showDialogLiveData.value = false
             }
         }

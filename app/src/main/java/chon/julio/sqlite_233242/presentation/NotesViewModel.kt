@@ -48,7 +48,7 @@ class NotesViewModel(
                 viewModelScope.launch {
                     showDialogLiveData.value = true
                     noteToDelete = event.note
-                    // dao.deleteNote(event.note)
+
                 }
             }
 
@@ -89,7 +89,7 @@ class NotesViewModel(
     }
 
     fun confirmDeleteNote() {
-        // Realiza la acción de eliminación en un subproceso de fondo
+
         viewModelScope.launch {
             noteToDelete?.let { note ->
                 dao.deleteNote(note)
